@@ -1,7 +1,12 @@
 import React from "react";
+import Mouse from "../components/Mouse";
 
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <Mouse />
+    </div>
+  );
 };
 
 export default Contact;
