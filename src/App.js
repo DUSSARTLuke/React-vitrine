@@ -9,7 +9,7 @@ import {
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import { Project1, Project2, Project3, Project4 } from "./pages/Projects";
-
+import { AnimatePresence } from "framer-motion";
 const App = () => {
   const location = useLocation();
   const history = useHistory();
@@ -66,7 +66,7 @@ const App = () => {
   }, [history]);
 
   return (
-    <div>
+    <AnimatePresence>
       <Switch location={location} key={location.pathname}>
         <Route exact path="/" component={Home} />
         <Route exact path="/project-1" component={Project1} />
@@ -76,7 +76,7 @@ const App = () => {
         <Route exact path="/contact" component={Contact} />
         <Redirect to="/" />
       </Switch>
-    </div>
+    </AnimatePresence>
   );
 };
 
